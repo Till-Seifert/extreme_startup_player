@@ -2,6 +2,10 @@ package com.oocode;
 
 public class Answerer {
     public String answerFor(String question) {
-        return "TobiTill";
+        switch (question) {
+            case "What is your name?":
+                return "TobiTill";
+        }
+        return null;
     }
 }
