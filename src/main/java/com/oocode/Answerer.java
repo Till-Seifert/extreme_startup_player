@@ -9,7 +9,9 @@ public class Answerer {
         question = question.replace("?", "");
         List<String> questionList = Arrays.asList(question.split(" "));
         if (Objects.equals(questionList.get(0), "What") && Objects.equals(questionList.get(1), "is")) {
-            if (Objects.equals(questionList.get(3), "plus")) {
+            if (Objects.equals(questionList.get(3), "name")){
+                return "TobiTill";
+            } else if (Objects.equals(questionList.get(3), "plus")) {
                 return String.valueOf(Integer.parseInt(questionList.get(2)) + Integer.parseInt(questionList.get(4)));
             } else if (Objects.equals(questionList.get(3), "multiplied")) {
                 return String.valueOf(Integer.parseInt(questionList.get(2)) * Integer.parseInt(questionList.get(5)));
