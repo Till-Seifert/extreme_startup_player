@@ -15,6 +15,8 @@ public class Answerer {
                 return String.valueOf(Integer.parseInt(questionList.get(2)) * Integer.parseInt(questionList.get(5)));
             } else if (Objects.equals(questionList.get(3), "minus")) {
                 return String.valueOf(Integer.parseInt(questionList.get(2)) - Integer.parseInt(questionList.get(4)));
+            } else if (Objects.equals(questionList.get(5), "power")) {
+                return String.valueOf((int) Math.pow(Double.parseDouble(questionList.get(2)), Integer.parseInt(questionList.get(7))));
             }
         } else if (question.contains("Which of the following numbers is the largest:")) {
             List<String> questionList2 = Arrays.asList(question.split(":"));
@@ -42,6 +44,7 @@ public class Answerer {
                     .map(String::valueOf)
                     .findFirst().get();
         }
+
         return "TobiTill";
     }
 
