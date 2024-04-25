@@ -61,7 +61,7 @@ public class AnswererTest {
     public void powerTwoNumbers(){
         var contents = new Answerer().answerFor("What is 2 to the power of 3?");
 
-        assertThat(contents, equalTo("8"));
+        assertThat(contents, equalTo("8.0"));
     }
 
 }
