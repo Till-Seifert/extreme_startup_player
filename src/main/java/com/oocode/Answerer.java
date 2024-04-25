@@ -13,6 +13,8 @@ public class Answerer {
                 return String.valueOf(Integer.parseInt(questionList.get(2)) + Integer.parseInt(questionList.get(4)));
             } else if (Objects.equals(questionList.get(3), "multiplied")) {
                 return String.valueOf(Integer.parseInt(questionList.get(2)) * Integer.parseInt(questionList.get(5)));
+            } else if (Objects.equals(questionList.get(3), "minus")) {
+                return String.valueOf(Integer.parseInt(questionList.get(2)) - Integer.parseInt(questionList.get(4)));
             }
         } else if (question.contains("Which of the following numbers is the largest:")) {
             List<String> questionList2 = Arrays.asList(question.split(":"));

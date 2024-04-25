@@ -1,5 +1,6 @@
 package com.oocode;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -40,5 +41,20 @@ public class AnswererTest {
         var contents = new Answerer().answerFor("Which of the following numbers is both a square and a cube: 3960, 27, 332, 174, 4096, 3461, 2025?");
 
         assertThat(contents, equalTo("4096"));
+    }
+
+    @Test
+    @Disabled
+    public void whichNumbersArePrimes(){
+        var contents = new Answerer().answerFor("Which of the following numbers are primes: 88, 44, 89, 71, 36?");
+
+        assertThat(contents, equalTo("4096"));
+    }
+
+    @Test
+    public void subtractTwoNumbers(){
+        var contents = new Answerer().answerFor("What is 7 minus 54?");
+
+        assertThat(contents, equalTo("-47"));
     }
 }
