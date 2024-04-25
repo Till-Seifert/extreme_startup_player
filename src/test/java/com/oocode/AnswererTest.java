@@ -35,4 +35,10 @@ public class AnswererTest {
         assertThat(contents, equalTo("57"));
     }
 
+    @Test
+    public void whichIsBothSquareAndCube(){
+        var contents = new Answerer().answerFor("Which of the following numbers is both a square and a cube: 3960, 27, 332, 174, 4096, 3461, 2025?");
+
+        assertThat(contents, equalTo("4096"));
+    }
 }
