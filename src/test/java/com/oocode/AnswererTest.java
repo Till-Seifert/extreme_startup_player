@@ -13,11 +13,17 @@ public class AnswererTest {
         assertThat(contents, equalTo("TobiTill"));
     }
 
+    @Test
     public void addTwoNumbers() {
         var contents = new Answerer().answerFor("What is 30 plus 82?");
 
         assertThat(contents, equalTo("112"));
     }
 
+    @Test
+    public void multiplyTwoNumbers(){
+        var contents = new Answerer().answerFor("What is 3 multiplied by 4?");
 
+        assertThat(contents, equalTo("12"));
+    }
 }
