@@ -14,9 +14,10 @@ public class AnswererTest {
     }
 
     public void addTwoNumbers() {
-        var contents = new Answerer().answerFor("What is 30 plus 82??");
+        var contents = new Answerer().answerFor("What is 30 plus 82?");
 
         assertThat(contents, equalTo("112"));
     }
+
 
 }
