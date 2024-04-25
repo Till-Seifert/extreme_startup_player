@@ -32,7 +32,30 @@ public class Answerer {
                     .map(String::valueOf)
                     .findFirst().get();
         }
+        else if (question.contains("Which of the following numbers are primes:")) {
+            List<String> questionList2 = Arrays.asList(question.split(":"));
+            String t = questionList2.get(1).replace(" ", "");
+            List<String> questionList3 = Arrays.asList(t.split(","));
+            return questionList3.stream()
+                    .map(Integer::parseInt)
+                    .filter(num -> isPrime(num))
+                    .map(String::valueOf)
+                    .findFirst().get();
+        }
         return "TobiTill";
+    }
+
+    private boolean isPrime(Integer num) {
+        if (num % 2 == 0){
+            return false;
+        } else {
+            for (double i=3; i<num; i=i+2){
+                if (num/i == Math.floor(num/i)){
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 
     private boolean isSqua(Integer num) {

@@ -44,11 +44,10 @@ public class AnswererTest {
     }
 
     @Test
-    @Disabled
     public void whichNumbersArePrimes(){
         var contents = new Answerer().answerFor("Which of the following numbers are primes: 88, 44, 89, 71, 36?");
 
-        assertThat(contents, equalTo("4096"));
+        assertThat(contents, equalTo("89"));
     }
 
     @Test
