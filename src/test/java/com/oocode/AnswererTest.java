@@ -26,4 +26,13 @@ public class AnswererTest {
 
         assertThat(contents, equalTo("12"));
     }
+
+
+    @Test
+    public void whichIsHighestNumber(){
+        var contents = new Answerer().answerFor("Which of the following numbers is the largest: 52, 17, 57?");
+
+        assertThat(contents, equalTo("57"));
+    }
+
 }

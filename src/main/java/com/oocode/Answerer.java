@@ -16,7 +16,8 @@ public class Answerer {
             }
         } else if (question.contains("Which of the following numbers is the largest:")) {
             List<String> questionList2 = Arrays.asList(question.split(":"));
-            List<String> questionList3 = Arrays.asList(questionList2.get(1).split(","));
+            String t = questionList2.get(1).replace(" ", "");
+            List<String> questionList3 = Arrays.asList(t.split(","));
             var max1 = Math.max(Integer.parseInt(questionList3.get(0)), Integer.parseInt(questionList3.get(1)));
             return String.valueOf(Math.max(max1, Integer.parseInt(questionList3.get(2))));
         }
