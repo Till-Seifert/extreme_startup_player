@@ -21,6 +21,12 @@ public class AnswererTest {
         assertThat(contents, equalTo("112"));
     }
 
+    public void addThreeNumbers() {
+        var contents = new Answerer().answerFor("What is 30 plus 82 plus 10?");
+
+        assertThat(contents, equalTo("122"));
+    }
+
     @Test
     public void multiplyTwoNumbers(){
         var contents = new Answerer().answerFor("What is 3 multiplied by 4?");
